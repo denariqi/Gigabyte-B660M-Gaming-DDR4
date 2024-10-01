@@ -15,6 +15,33 @@
 - SSDT-RTCAWAC.aml
 - SSDT-USB-Reset.aml
 - FixShutdown-USB-SSDT.aml
+  + 需要在 ACPI--Patch 下增加一条全局重命名来配合此 FixShutdown-USB-SSDT
+  + Comment: _PTS to ZPTS
+  + Count:1
+  + Enabled:YES
+  + Find:<5F505453 01>
+  + Limit:0
+  + Mask:<>
+  + OemTable:<>
+  + Replace:<5A505453 01>
+  + ReplaceMask:<>
+  + Skip:0
+  + TableLength:0
+  + TableSignature:<>
+- SSDT-GPRW.aml
+  + 需要在 ACPI--Patch 下增加一条全局重命名来配合此 SSDT-GPRW
+  + Comment: GPRW to XPRW
+  + Count:0
+  + Enabled:YES
+  + Find:<4750525702>
+  + Limit:0
+  + Mask:<>
+  + OemTable:<>
+  + Replace:<5850525702>
+  + ReplaceMask:<>
+  + Skip:0
+  + TableLength:0
+  + TableSignature:<>
 # Drivers
 - HfsPlus.efi
 - OpenRuntime.efi
